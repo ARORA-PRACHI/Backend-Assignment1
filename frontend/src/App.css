@@ -1,0 +1,43 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #3e3b52;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+footer {
+  background-color: #3e3b52;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.container {
+  display: flex;
+  margin-top: 20px;
+  padding: 20px;
+  min-height: calc(100vh - 140px); /* Adjusting height for header and footer */
+}
+
+.sidebar-left,
+.sidebar-right {
+  background-color: #857b7b;
+  padding: 20px;
+  width: 20%;
+}
+
+main {
+  flex: 1;
+  background-color: #848d95;
+  padding: 20px;
+  margin: 0 20px;
+}
