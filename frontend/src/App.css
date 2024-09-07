@@ -1,43 +1,66 @@
+/* General styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+  background-color: #f4f4f4; /* Light background color for better contrast */
 }
 
+/* Header styling */
 header {
   background-color: #3e3b52;
   color: white;
   text-align: center;
   padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a more modern look */
 }
 
+/* Footer styling */
 footer {
   background-color: #3e3b52;
   color: white;
   text-align: center;
-  padding: 10px;
-  position: fixed;
+  padding: 15px;
   width: 100%;
-  bottom: 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a more modern look */
+  margin-top: 20px; /* Creates gap between the footer and the content */
+  position: relative; /* Allows footer to move with the content and maintain gap */
 }
 
+/* Main container styling */
 .container {
   display: flex;
   margin-top: 20px;
   padding: 20px;
-  min-height: calc(100vh - 140px); /* Adjusting height for header and footer */
+  min-height: calc(100vh - 160px); /* Adjusted height for header, footer, and gap */
+  gap: 20px; /* Gap between columns for better spacing */
 }
 
+/* Sidebar styling */
 .sidebar-left,
 .sidebar-right {
   background-color: #857b7b;
   padding: 20px;
   width: 20%;
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
 
+/* Main content styling */
 main {
   flex: 1;
   background-color: #848d95;
   padding: 20px;
-  margin: 0 20px;
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effects for sidebars and main content */
+.sidebar-left:hover,
+.sidebar-right:hover,
+main:hover {
+  transform: translateY(-5px); /* Subtle lift effect on hover */
 }
