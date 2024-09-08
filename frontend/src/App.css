@@ -1,3 +1,51 @@
+/* Navbar styling */
+nav {
+  background-color: #3e3b52;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.navbar {
+  list-style-type: none;
+  display: flex;
+  align-items: center;  /* Vertically center the logo and links */
+  justify-content: space-between; /* Ensure logo stays on the left and links on the right */
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-left {
+  margin-right: auto;  /* Pushes the right-side links to the far right */
+}
+
+.navbar-right {
+  display: flex;
+  gap: 30px; /* Small gap between navigation links */
+}
+
+.navbar li {
+  margin: 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #f4f4f4; /* Lighter hover effect */
+}
+
+/* Logo styling */
+.logo {
+  width: 40px;  /* Adjust the size of the logo */
+  height: auto;
+  margin-right: 40px; /* Small space between the logo and the right-side links */
+}
+
 /* General styles */
 body {
   font-family: Arial, sans-serif;
@@ -5,15 +53,6 @@ body {
   padding: 0;
   box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
   background-color: #f4f4f4; /* Light background color for better contrast */
-}
-
-/* Header styling */
-header {
-  background-color: #3e3b52;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a more modern look */
 }
 
 /* Footer styling */
@@ -24,28 +63,40 @@ footer {
   padding: 15px;
   width: 100%;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for a more modern look */
-  margin-top: 20px; /* Creates gap between the footer and the content */
-  position: relative; /* Allows footer to move with the content and maintain gap */
+  position: relative;
+  margin-top: 0; /* Remove any gap above the footer */
 }
 
 /* Main container styling */
 .container {
   display: flex;
-  margin-top: 20px;
+  margin: 0; /* Remove top margin to touch the navbar */
   padding: 20px;
-  min-height: calc(100vh - 160px); /* Adjusted height for header, footer, and gap */
+  min-height: calc(100vh - 110px); /* Adjusted height for navbar and footer without gaps */
   gap: 20px; /* Gap between columns for better spacing */
+  padding-left: 0; /* Ensure the left edge of the sidebar touches the screen */
+  padding-right: 0; /* Ensure the right edge of the sidebar touches the screen */
 }
 
 /* Sidebar styling */
-.sidebar-left,
+.sidebar-left {
+  background-color: #857b7b;
+  padding: 20px;
+  width: 20%;
+  border-radius: 8px 0 0 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  margin-left: 0; /* Remove margin to touch the screen */
+}
+
 .sidebar-right {
   background-color: #857b7b;
   padding: 20px;
   width: 20%;
-  border-radius: 8px; /* Rounded corners for a softer look */
+  border-radius: 0 8px 8px 0; /* Rounded corners for a softer look */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  margin-right: 0; /* Remove margin to touch the screen */
 }
 
 /* Main content styling */
@@ -53,7 +104,7 @@ main {
   flex: 1;
   background-color: #848d95;
   padding: 20px;
-  border-radius: 8px; /* Rounded corners for a softer look */
+  border-radius: 0px; /* Remove rounded corners to touch the sidebars */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   transition: transform 0.3s ease; /* Smooth transition for hover effect */
 }
